@@ -5,6 +5,12 @@ export interface PredictionResponse {
   }
 }
 
+export interface PredictAllResponse {
+  knn: PredictionResponse
+  svm: PredictionResponse
+  nb: PredictionResponse
+}
+
 export interface ProjectionResponse {
   x: number
   y: number

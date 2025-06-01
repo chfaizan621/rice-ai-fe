@@ -1,6 +1,6 @@
 export const RICE_COLORS = {
   Basmati: "#FF5733",
-  Gonen: "#33FF57",
+  Arborio: "#33FF57",
   Ipsala: "#5733FF",
   Jasmine: "#33FFFF",
   Karacadag: "#FF33F6",

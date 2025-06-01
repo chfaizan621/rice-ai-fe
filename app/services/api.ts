@@ -1,14 +1,14 @@
-import { PredictionResponse, ProjectionResponse, MetricsResponse } from '../types/rice-classification'
+import { PredictionResponse, ProjectionResponse, MetricsResponse, PredictAllResponse } from '../types/rice-classification'
 
 const API_BASE_URL = 'http://localhost:8000'
 
-export const predictRiceVariety = async (formData: Record<string, number>, modelName: string): Promise<PredictionResponse> => {
-  const response = await fetch(`${API_BASE_URL}/predict`, {
+export const predictRiceVariety = async (formData: Record<string, number>): Promise<PredictAllResponse> => {
+  const response = await fetch(`${API_BASE_URL}/predict-all`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
     },
-    body: JSON.stringify({ features: formData, model_name: modelName }),
+    body: JSON.stringify({ features: formData }),
   })
 
   if (!response.ok) {
